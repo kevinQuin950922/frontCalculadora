@@ -15,7 +15,7 @@ const handleChange=(event)=> {
     setData({...data, [event.target.name]:event.target.value})
 }
 const handleClick =()=>{
-    axios.get(`http://localhost:8080/div?n1=${data.number1}&n2=${data.number2}`)
+    axios.get(`http://localhost:8085/div?n1=${data.number1}&n2=${data.number2}`)
     .then(response=>setData({...data,response:response.data.response,
     status:response.data.status})).catch(error=>console.log(error))
 }
